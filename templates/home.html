@@ -1,10 +1,26 @@
 {% extends 'base.html' %}
 
 {% block body %}
-       <h1>Hola buenas tardes {{nom}},BIENVENIDO</h1>
+       <h1>Hola buenas tardes {{nom}},BIENVENIDO  </h1>
 
-       <h2>Esta es tu lista de invitados</h2>
-       {% for nombre in lista_nombres %}
-            <li>{{nombre}}</li>
-       {% endfor %}
-{% endblock %}
+       <!-- contenedor de formularios-->
+
+       <section class="container">
+          <h2 class="subtitle"> Ingresa una tarea nueva:</textarea></h2>
+          <form action="{{url_for('agregar')}}" method="POST">
+               <input type="text"  name="tarea">
+               <button id="btn-submit" type="submit">Agregar</button>
+
+          </form>
+       </section>
+     <!--Contenedor de tareas-->
+     <section class="container">
+
+       {% for tarea in lista_tareas%}
+            <article class="task container">
+               {{tarea}}
+            </article>
+       {%endfor%}
+
+     </section>
+{% endblock %} 
