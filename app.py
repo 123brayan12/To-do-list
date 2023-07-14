@@ -21,3 +21,9 @@ def agregar():
         nueva_tarea=request.form.get('tarea')
         lista_tareas.append(nueva_tarea)
     return redirect('/')
+
+@app.route('/delete/<int:id>')
+
+def delete(id):
+    lista_tareas.pop(id)
+    return  redirect('/')
