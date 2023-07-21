@@ -46,3 +46,18 @@ form{
     width: 250px;
     margin: 20px auto;
 }
+
+.task{
+    background-color: rgb(37, 235, 83);
+    color: rgb(0, 0, 0);
+    width: 450px;
+}
+
+table,tr,td{
+    margin: 5px auto;
+}
+
+.icon{
+    width: 30px;
+    height: 30px;
+}
