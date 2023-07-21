@@ -15,7 +15,7 @@
        </section>
 
        {%if lista_tareas|length < 1%}
-           <h4 class="subtitle">No hay tareas pendientes</h4>
+           <h4 class="subtitle">No hay tareas pendientes &#x5350;</h4>
        {% else %}
      <!--Contenedor de tareas-->
      <section class="container">
@@ -33,7 +33,9 @@
                          
                     
                          <td>
-                              <a class="anchor" href="/delete/{{lista_tareas.index(tarea)}}">Borrar</a>
+                              <a class="anchor" href="/delete/{{lista_tareas.index(tarea)}}">
+                                   <img class="icon" src="/static/images/goma-de-borrar.png" alt="Borrar">
+                              </a>
                          </td>
                          
                     
